@@ -18,7 +18,7 @@ nb_list_t		*create_nb_elem()
   return (nb_list);
 }
 
-nb_list_t		*add_in_list_prev(nb_list_t *nb, char digit)
+nb_list_t		*add_in_list_prev(nb_list_t *nb, char const digit)
 {
   nb_list_t		*new_elem;
 
@@ -33,7 +33,7 @@ nb_list_t		*add_in_list_prev(nb_list_t *nb, char digit)
   return (new_elem);
 }
 
-nb_list_t		*add_in_list_next(nb_list_t *nb, char digit)
+nb_list_t		*add_in_list_next(nb_list_t *nb, char const digit)
 {
   nb_list_t		*new_elem;
 
@@ -48,7 +48,7 @@ nb_list_t		*add_in_list_next(nb_list_t *nb, char digit)
   return (new_elem);
 }
 
-nb_list_t		*array_to_list(char *nb)
+nb_list_t		*array_to_list(char const * const nb)
 {
   nb_list_t		*new_nb;
   int			i;

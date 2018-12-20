@@ -4,14 +4,14 @@
 # include "mylist.h"
 # include "infinadd.h"
 
-int			is_digit(char c)
+int			is_digit(char const c)
 {
   if (c < 48 || c > 57)
     return (0);
   return (1);
 }
 
-nb_list_t		*add_in_res(nb_list_t *res, int add)
+nb_list_t		*add_in_res(nb_list_t *res, int const add)
 {
   if (!is_digit(res->digit))
     {
@@ -24,7 +24,7 @@ nb_list_t		*add_in_res(nb_list_t *res, int add)
   return (res);
 }
 
-nb_list_t		*infin_add(nb_list_t *a, nb_list_t *b)
+nb_list_t		*infin_add(nb_list_t const *a, nb_list_t const *b)
 {
   nb_list_t		*res;
   int			add;
@@ -53,15 +53,15 @@ nb_list_t		*infin_add(nb_list_t *a, nb_list_t *b)
 }
 
 void			fill_zero_in_nb(nb_list_t *a, nb_list_t *b,
-					 int len_nb1, int len_nb2)
+					 int const len_nb1, int const len_nb2)
 {
   int			zeros;
   nb_list_t		*tmp;
 
   zeros = 0;
+  tmp = a;
   if (len_nb1 < len_nb2)
     {
-      tmp = a;
       zeros = len_nb2 - len_nb1;
     }
   else if (len_nb1 > len_nb2)
@@ -80,7 +80,7 @@ void			fill_zero_in_nb(nb_list_t *a, nb_list_t *b,
     }
 }
 
-void			display_nb(nb_list_t *nb)
+void			display_nb(nb_list_t const *nb)
 {
   while (nb)
     {

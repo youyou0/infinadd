@@ -12,15 +12,15 @@ typedef struct		nb_list
 }			nb_list_t;
 
 nb_list_t		*create_nb_elem();
-nb_list_t		*add_in_list_prev(nb_list_t *nb, char digit);
-nb_list_t		*add_in_list_next(nb_list_t *nb, char digit);
-nb_list_t		*array_to_list(char *nb);
-nb_list_t		*infin_add(nb_list_t *a, nb_list_t *b);
-nb_list_t		*add_in_res(nb_list_t *res, int add);
-int			is_digit(char c);
+nb_list_t		*add_in_list_prev(nb_list_t *nb, char const digit);
+nb_list_t		*add_in_list_next(nb_list_t *nb, char const digit);
+nb_list_t		*array_to_list(char const * const nb);
+nb_list_t		*infin_add(nb_list_t const *a, nb_list_t const *b);
+nb_list_t		*add_in_res(nb_list_t *res, int const add);
+int			is_digit(char const c);
 void			fill_zero_in_nb(nb_list_t *a, nb_list_t *b,
-					int len_nb1, int len_nb2);
+					int const len_nb1, int const len_nb2);
 void			my_printerr();
-void			display_nb(nb_list_t *nb);
+void			display_nb(nb_list_t const *nb);
 
 #endif /* _INFINADDMYLIST_H_ */
