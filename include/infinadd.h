@@ -23,4 +23,4 @@ void			fill_zero_in_nb(nb_list_t *a, nb_list_t *b,
 void			my_printerr();
 void			display_nb(nb_list_t const *nb);
 
-#endif /* _INFINADDMYLIST_H_ */
+#endif /* _INFINADD_H_ */
